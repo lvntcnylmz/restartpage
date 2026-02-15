@@ -547,31 +547,12 @@
         margin-bottom: 0.5rem;
     }
     .group input[type='text'],
-    .group input[type='password'],
     .group input[type='number'],
     .group input[type='url'] {
         width: 100%;
         padding: 0.5rem;
         background: var(--bg-2);
         border: 2px solid var(--bg-3);
-    }
-    .group textarea {
-        width: 100%;
-        padding: 0.5rem;
-        background: var(--bg-2);
-        border: 2px solid var(--bg-3);
-        resize: vertical;
-        font-family: var(--font-family);
-        font-size: 0.875rem;
-        min-height: 6rem;
-        color: inherit;
-
-        &:focus {
-            outline: none;
-        }
-        &::placeholder {
-            color: var(--txt-3);
-        }
     }
     .links-header {
         display: flex;
@@ -624,49 +605,14 @@
         font-size: 1.125rem;
         font-weight: 300;
     }
-    .settings-actions {
-        display: flex;
-        gap: 1rem;
-        margin-bottom: 1rem;
-    }
     .bracket {
         color: var(--txt-3);
     }
     .action-text {
         color: var(--txt-2);
     }
-    button:hover .bracket,
-    a:hover .bracket {
+    button:hover .bracket {
         color: var(--txt-2);
-    }
-    .version {
-        color: var(--txt-3);
-
-        a {
-            color: var(--txt-2);
-        }
-        a:hover {
-            color: var(--txt-1);
-        }
-    }
-    .theme-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0.5rem;
-    }
-    .theme-preview {
-        display: inline-flex;
-        vertical-align: middle;
-        margin-top: -0.125rem;
-        border: 2px solid var(--bg-3);
-    }
-    .theme-preview div {
-        width: 1rem;
-        height: 1rem;
-    }
-    .theme-name {
-        font-size: 0.9rem;
-        flex: 1;
     }
     .radio-group,
     .checkbox-group {
