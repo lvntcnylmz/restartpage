@@ -1,0 +1,284 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #000000;
+  --bg2: #000000;
+  --border: #2a2a37;
+  --dim: #54546d;
+  --muted: #716e8c;
+  --text: #c5c9c5;
+  --green: #8a9a7b;
+  --bright: #98bb6c;
+  --cyan: #7aa89f;
+  --orange: #c8956c;
+  --yellow: #c0a36e;
+  --red: #e46876;
+  --label: #a6a69c;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "JetBrainsMono NFM", monospace;
+  font-size: 100%;
+  font-weight: bold;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#app {
+  width: 700px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 16px;
+}
+
+.widget {
+  border: 2px solid var(--border);
+  position: relative;
+  padding: 16px 18px;
+  background: var(--bg2);
+}
+.widget-label {
+  position: absolute;
+  top: -14px;
+  left: 14px;
+  background: var(--bg);
+  padding: 0 6px;
+  color: var(--label);
+  font-size: 15px;
+}
+
+/* ── TOP ROW ── */
+.top-row {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 16px;
+}
+
+#clock-time {
+  font-size: 64px;
+  color: var(--bright);
+  line-height: 1;
+}
+#clock-date {
+  color: var(--muted);
+  margin-top: 6px;
+  font-size: 15px;
+}
+
+/* ── CALENDAR ── */
+.calendar-container {
+  font-size: 12px;
+  text-align: center;
+}
+.calendar-header {
+  color: var(--cyan);
+  margin-bottom: 8px;
+  text-transform: lowercase;
+}
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+.cal-day-head {
+  color: var(--dim);
+  font-size: 10px;
+  padding-bottom: 4px;
+}
+.cal-day {
+  color: var(--muted);
+}
+.cal-today {
+  color: var(--bg);
+  background: var(--bright);
+}
+
+/* ── MIDDLE ROW ── */
+.mid-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* ── WEATHER ── */
+.weather-temp {
+  font-size: 52px;
+  color: var(--bright);
+  line-height: 1;
+}
+.weather-desc {
+  color: var(--cyan);
+  margin-top: 4px;
+  margin-bottom: 14px;
+}
+.weather-meta {
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+.weather-meta span {
+  color: var(--text);
+}
+.weather-forecast div {
+  display: grid;
+  grid-template-columns: 56px 26px 1fr;
+  gap: 8px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+.fc-time {
+  color: var(--dim);
+}
+.fc-temp {
+  color: var(--text);
+}
+.wc-sunny {
+  color: var(--yellow);
+}
+.wc-cloud {
+  color: var(--muted);
+}
+.wc-rain {
+  color: var(--cyan);
+}
+
+/* ── POMODORO ── */
+.pomo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 14px;
+}
+.pomo-mode {
+  font-size: 13px;
+}
+.pomo-mode.focus {
+  color: var(--green);
+}
+.pomo-mode.short {
+  color: var(--cyan);
+}
+.pomo-mode.long {
+  color: var(--yellow);
+}
+.pomo-session {
+  color: var(--muted);
+  font-size: 13px;
+}
+.pomo-dot-filled {
+  color: var(--green);
+}
+.pomo-dot-empty {
+  color: var(--dim);
+}
+.pomo-time {
+  font-size: 64px;
+  line-height: 1;
+  margin-bottom: 10px;
+  color: var(--bright);
+  transition: color 0.3s;
+}
+.pomo-time.short-color {
+  color: var(--cyan);
+}
+.pomo-time.long-color {
+  color: var(--yellow);
+}
+.pomo-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  font-size: 13px;
+}
+.pomo-bar {
+  flex: 1;
+  height: 10px;
+  background: var(--border);
+  overflow: hidden;
+}
+.pomo-bar-fill {
+  height: 100%;
+  background: var(--green);
+  width: 0%;
+  transition: width 0.8s linear;
+}
+.pomo-bar-fill.short-color {
+  background: var(--cyan);
+}
+.pomo-bar-fill.long-color {
+  background: var(--yellow);
+}
+.pomo-pct {
+  color: var(--muted);
+  min-width: 36px;
+  text-align: right;
+}
+.pomo-status {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 10px;
+  min-height: 18px;
+}
+.pomo-status.running {
+  color: var(--green);
+}
+.pomo-status.paused {
+  color: var(--yellow);
+}
+.pomo-controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+.pomo-btn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 12px;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+.pomo-btn:hover {
+  border-color: var(--green);
+  color: var(--green);
+}
+.pomo-btn.active {
+  border-color: var(--bright);
+  color: var(--bright);
+}
+
+/* ── LINKS ── */
+.links-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4px 0;
+}
+.links-grid a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.links-grid a::before {
+  content: ">";
+  color: var(--dim);
+}
+.links-grid a:hover {
+  color: var(--bright);
+}
+.links-grid a:hover::before {
+  color: var(--green);
+}

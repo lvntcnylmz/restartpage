@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>~/startpage</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="top-row">
+        <div class="widget">
+          <span class="widget-label">datetime</span>
+          <div id="clock-time">00:00:00</div>
+          <div id="clock-date">loading...</div>
+        </div>
+
+        <div class="widget">
+          <span class="widget-label">calendar</span>
+          <div class="calendar-container">
+            <div class="calendar-header" id="cal-month">month</div>
+            <div class="calendar-grid" id="cal-grid"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mid-row">
+        <div class="widget" id="weather-widget">
+          <span class="widget-label">weather</span>
+          <div class="weather-temp" id="w-temp">--°</div>
+          <div class="weather-desc" id="w-desc">--</div>
+          <div class="weather-meta">
+            humi <span id="w-humi">--</span>%&nbsp;&nbsp;&nbsp; wind
+            <span id="w-wind">--</span> kmh<br />
+            prec <span id="w-prec">--</span>%&nbsp;&nbsp;&nbsp; feel
+            <span id="w-feel">--</span>°
+          </div>
+          <div class="weather-forecast" id="w-forecast"></div>
+        </div>
+
+        <div class="widget" id="pomo-widget">
+          <span class="widget-label">pomodoro</span>
+          <div class="pomo-header">
+            <div class="pomo-mode focus" id="pomo-mode-label">[FOCUS]</div>
+            <div class="pomo-session">
+              session [<span id="pomo-sess-num">01</span>]
+              <span class="pomo-dots" id="pomo-dots">○ ○ ○ ○</span>
+            </div>
+          </div>
+          <div class="pomo-time focus-color" id="pomo-time">25:00</div>
+          <div class="pomo-bar-row">
+            <div class="pomo-bar">
+              <div class="pomo-bar-fill" id="pomo-bar-fill"></div>
+            </div>
+            <div class="pomo-pct" id="pomo-pct">0%</div>
+          </div>
+          <div class="pomo-status waiting" id="pomo-status">
+            waiting to start
+          </div>
+          <div class="pomo-controls">
+            <button class="pomo-btn" id="btn-toggle" onclick="pomoToggle()">
+              [space] start
+            </button>
+            <button class="pomo-btn" id="btn-skip" onclick="pomoSkip()">
+              [s] skip
+            </button>
+            <button class="pomo-btn" id="btn-reset" onclick="pomoReset()">
+              [r] reset
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="widget">
+        <span class="widget-label">links</span>
+        <div class="links-grid">
+          <a href="https://youtube.com">youtube</a>
+          <a href="https://wiki.archlinux.org">archwiki</a>
+          <a href="https://itsfoss.com">itsfoss</a>
+          <a href="https://leetcode.com">leetcode</a>
+          <a href="https://guidetojapanese.org/learn/">taeKimGuide</a>
+          <a href="https://reddit.com">reddit</a>
+          <a href="https://mail.google.com">mail</a>
+          <a href="https://phoronix.com">phoronix</a>
+          <a href="https://hackerrank.com">hackerrank</a>
+          <a href="https://tadoku.app/reader/">tadokuBooks</a>
+          <a href="https://github.com">github</a>
+          <a href="https://translate.google.com">translate</a>
+          <a href="https://9to5linux.com">9to5linux</a>
+          <a href="https://codewars.com">codewars</a>
+          <a href="https://www.wanikani.com">wanikani</a>
+          <a href="https://gitlab.com">gitlab</a>
+          <a href="https://monkeytype.com">typing</a>
+          <a href="https://howtogeek.com">howtogeek</a>
+          <a href="https://doc.rust-lang.org/std/">rust:std</a>
+          <a href="https://kanadojo.com">kanadojo</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
