@@ -8,26 +8,24 @@
 
 :root {
   --bg: #000000;
-  --border: #2a2a37;
   --dim: #54546d;
   --muted: #716e8c;
-  --text: #c5c9c5;
+  --border: #2a2a37;
+  --text: #c6c9c5;
+  --label: #c8c093;
   --green: #8a9a7b;
-  --bright: #98bb6c;
-  --cyan: #7aa89f;
-  --orange: #c8956c;
-  --yellow: #c0a36e;
-  --red: #e46876;
-  --label: #a6a69c;
+  --bright: #87a987;
+  --orange: #b6927b;
+  --yellow: #c4b28a;
+  --red: #c4746e;
 }
 
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: "Terminess Nerd Font Propo", monospace;
-  font-size: 100%;
+  font-family: "Terminess Nerd Font Mono", monospace;
   font-weight: bold;
-  line-height: 1.5;
+  line-height: 1.2;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -35,7 +33,7 @@ body {
 }
 
 #app {
-  width: 700px;
+  /* width: 550px; */
   display: grid;
   grid-template-rows: auto 1fr auto;
   gap: 16px;
@@ -49,12 +47,12 @@ body {
 }
 .widget-label {
   position: absolute;
-  top: -15px;
+  top: -9px;
   left: 15px;
   background: var(--bg);
-  padding: 0 6px;
+  padding: 0 0px;
   color: var(--label);
-  font-size: 17px;
+  font-size: 13px;
 }
 
 /* ── TOP ROW ── */
@@ -66,7 +64,7 @@ body {
 
 #clock-time {
   font-size: 64px;
-  color: var(--bright);
+  color: var(--green);
   line-height: 1;
 }
 #clock-date {
@@ -81,14 +79,14 @@ body {
   text-align: center;
 }
 .calendar-header {
-  color: var(--cyan);
+  color: var(--bright);
   margin-bottom: 8px;
   text-transform: lowercase;
 }
 .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 4px;
+  gap: 2px;
 }
 .cal-day-head {
   color: var(--dim);
@@ -113,11 +111,11 @@ body {
 /* ── WEATHER ── */
 .weather-temp {
   font-size: 52px;
-  color: var(--bright);
+  color: var(--green);
   line-height: 1;
 }
 .weather-desc {
-  color: var(--cyan);
+  color: var(--bright);
   margin-top: 4px;
   margin-bottom: 14px;
 }
@@ -148,7 +146,7 @@ body {
   color: var(--muted);
 }
 .wc-rain {
-  color: var(--cyan);
+  color: var(--green);
 }
 
 /* ── POMODORO ── */
@@ -165,7 +163,7 @@ body {
   color: var(--green);
 }
 .pomo-mode.short {
-  color: var(--cyan);
+  color: var(--green);
 }
 .pomo-mode.long {
   color: var(--yellow);
@@ -184,11 +182,11 @@ body {
   font-size: 64px;
   line-height: 1;
   margin-bottom: 10px;
-  color: var(--bright);
+  color: var(--green);
   transition: color 0.3s;
 }
 .pomo-time.short-color {
-  color: var(--cyan);
+  color: var(--green);
 }
 .pomo-time.long-color {
   color: var(--yellow);
@@ -213,7 +211,7 @@ body {
   transition: width 0.8s linear;
 }
 .pomo-bar-fill.short-color {
-  background: var(--cyan);
+  background: var(--green);
 }
 .pomo-bar-fill.long-color {
   background: var(--yellow);
