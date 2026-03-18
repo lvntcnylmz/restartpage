@@ -49,3 +49,12 @@ The UI is built with a focus on scannability and "terminal" vibes:
 - **HTML5 / CSS3** (Grid & Flexbox)
 - **Vanilla JavaScript** (ES6+)
 - **Open-Meteo API** (No API key required)
+
+## 💡 Credits & Inspiration
+
+This project is a minimalist reimagining of the original work by others in the open-source community.
+
+* **Original Concept**: Inspired by [re-start](https://github.com/refact0r/re-start) by **refact0r**.
+* **Weather Data**: Powered by the [Open-Meteo API](https://open-meteo.com/).
+* **Typography**: [JetBrains Mono Nerd Font](https://www.jetbrains.com/lp/mono/).
+* **Color Palette**: Influenced by the **Kanagawa** color schemes.
